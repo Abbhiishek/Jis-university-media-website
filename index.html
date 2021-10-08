@@ -12,37 +12,11 @@
 </head>
 <body>
     <div class="formContainer">
-        <h1>Enter Credentials Here:</h1>
+        <h1>login/signup:</h1>
         <input type="email" placeholder="email here" id="email"><br>
         <input type="password" placeholder="password here" id="password"><br>
         <button onclick="signUp()" id="signUp">SignUp</button>
         <button onclick="signIn()" id="signIp">SignIn</button>
         <button onclick="signOut()" id="signOut">SignOut</button>
-
-
-
-    <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-analytics.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-          
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
-              apiKey: "AIzaSyCHwWx3UGwa4siu23mWMp6nbKoC3pztEsI",
-              authDomain: "jis-university.firebaseapp.com",
-              projectId: "jis-university",
-              storageBucket: "jis-university.appspot.com",
-              messagingSenderId: "626047232746",
-              appId: "1:626047232746:web:9cdb26ec52ba8825f20593",
-              measurementId: "G-5DV440BC8M"
-            };
-          
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
-          </script>
 </body>
 </html>
