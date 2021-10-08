@@ -15,9 +15,6 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
-
-
-
 //signup function
 function signUp() {
     var email = document.getElementById("email");
@@ -35,6 +32,7 @@ function signIn() {
     var password = document.getElementById("password");
     const promise = auth.signInWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message));
+    alert("SignIn Successfully");
 
 }
 
@@ -91,20 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     loginForm.addEventListener("submit", e => {
-        e.preventDefault();
-
-        // Perform your AJAX/Fetch login
-
-        
+        e.preventDefault();    
     });
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
-        inputElement.addEventListener("blur", e => {
-            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
-                setInputError(inputElement, "Username must be at least 10 characters in length");
-            }
-        });
-
+       
         inputElement.addEventListener("input", e => {
             clearInputError(inputElement);
         });
