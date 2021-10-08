@@ -1,6 +1,6 @@
  // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyB1-7QDAYfcdEhZRdLDytR0eLuSyfVjqsk",
     authDomain: "form-fb2df.firebaseapp.com",
     projectId: "form-fb2df",
@@ -11,12 +11,12 @@
     };
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 
 
 //signup function
-  function signUp(){
+function signUp(){
     var email = document.getElementById("email");
     var password = document.getElementById("password");
 
@@ -27,7 +27,7 @@
   }
 
   //signIN function
-  function  signIn(){
+function  signIn(){
     var email = document.getElementById("email");
     var password  = document.getElementById("password");
     const promise = auth.signInWithEmailAndPassword(email.value,password.value);
@@ -38,13 +38,13 @@
 
   //signOut
 
-  function signOut(){
+function signOut(){
     auth.signOut();
     alert("SignOut Successfully from System");
   }
 
   //active user to homepage
-  firebase.auth().onAuthStateChanged((user)=>{
+firebase.auth().onAuthStateChanged((user)=>{
     if(user){
       var email = user.email;
       alert("Active user "+email);
